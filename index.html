@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <title>Imagen principal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .jumbotron{
+            width:70%;
+            float:left;
+            height: 100%;
+            background-color:rgba(0, 110, 255, 0.719);
+            color:white;
+        }
+
+        header{           
+            margin-top:3%;
+            height:18vw;
+        }
+
+        .login{
+            float:left;
+            padding:1%;
+            border-radius: 8px;           
+            width:30%;
+            height: 100%;
+            background-color: orange;
+        }
+
+        label{
+            float:left;
+            font-size: 20px;
+        }
+
+        .form-control{
+            width: 65%;
+            float: right;
+            margin-left:2%;
+        }
+
+        .btn{
+            width: 48%;
+            float:left;
+            margin-left: 2%;
+        }
+
+        #acceso{
+            background-color: rgb(255, 72, 0);
+            text-align: center;
+            font-weight: bold;
+            color:white;
+            margin-top: 1%;
+            padding: 2px;
+        }
+
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header >
+                <div class="jumbotron text-center">
+                        <h1>CAMBIATRON</h1>  
+                        <hr class="my-2">     
+                        <p>Satanas es grande</p>
+                </div>
+                <div class="login ">
+                        <form >
+                            <h2 class="font-weight-normal text-center">LOGIN</h2>
+                            <label for="nombre" >Usuario</label>
+                            <input type="text" name="nombre" class="col form-control" placeholder="Pon tu usuario" required autofocus>
+                            <br><br>
+                            <label for="clave" >Clave</label>
+                            <input type="password" name="clave" class="col form-control" placeholder="Introduce la contraseña" required>
+                            <br><br><br>
+                            <button type="submit" class=" btn btn-md btn-primary btn-block" onclick="Permitir()">Acceder</button>
+                            <button type="reset" class=" btn btn-md btn-primary " >Borrar</button>
+                        </form>
+                </div>
+            </header>
+
+            <div id="acceso">
+                <h2 id="titulo">ACCESO DENEGADO</h2>
+            </div>
+
+        </div>
+        <script>
+            function Permitir(){
+                var usuario=document.getElementByName("nombre").value;
+                var clave=document.getElementByName("clave").value;
+
+                //if (usuario=="usuario" ){
+                    document.getElementById("titulo").innerHTML="ACCESO PERMITIDO";
+               // }
+            }
+        </script>
+    </body>
+</html>
